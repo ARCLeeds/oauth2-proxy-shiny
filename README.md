@@ -7,7 +7,7 @@ This example borrows heavily from [Hamel Husain's OAuth2-proxy tutorial](https:/
 
 ## To run locally
 
-To run locally you will need a GitHub account and Docker installed.
+To run locally you will need a [GitHub account](https://github.com/) and [Docker](https://docs.docker.com/get-docker/) installed.
 
 1. [Create an OAuth App](https://github.com/settings/applications/new) with GitHub. From this you will get a client ID and be able to create a client secret that you can add to `client_secret` and `client_id` sections of [`oauth2-proxy.cfg`](./oauth2-proxy.cfg).
 ![Creating OAuth App with GitHub](./assets/oauth2-proxy.png)
@@ -22,3 +22,7 @@ To run locally you will need a GitHub account and Docker installed.
     ```
 
 5. Run `docker-compose up` in the repository to start the services (this will pull down the oauth2-proxy Docker container the first time you run it)
+
+6. Visit http://localhost:4180, the first time you visit you may be asked to grant the app permission to read your GitHub account details, accept this and proceed. 
+
+7. Experiment with changing the [`emails.txt`](./emails.txt) whitelist file whilst running the app to remove/add your account.
