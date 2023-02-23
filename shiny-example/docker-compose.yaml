@@ -8,7 +8,7 @@ services:
       - 4180:4180/tcp
     hostname: oauth2-proxy
     volumes:
-      - "./oauth2-proxy.cfg:/oauth2-proxy.cfg"
+      - "./oauth2-proxy.prod.cfg:/oauth2-proxy.cfg"
       - "./emails.txt:/app/emails.txt"
     restart: unless-stopped
   shiny:
