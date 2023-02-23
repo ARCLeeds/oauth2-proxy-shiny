@@ -9,12 +9,12 @@ This example borrows heavily from [Hamel Husain's OAuth2-proxy tutorial](https:/
 
 To run locally you will need a [GitHub account](https://github.com/) and [Docker](https://docs.docker.com/get-docker/) installed.
 
-1. [Create an OAuth App](https://github.com/settings/applications/new) with GitHub. From this you will get a client ID and be able to create a client secret that you can add to `client_secret` and `client_id` sections of [`oauth2-proxy.cfg`](./oauth2-proxy.cfg).
+1. [Create an OAuth App](https://github.com/settings/applications/new) with GitHub. From this you will get a client ID and be able to create a client secret that you can add to `client_secret` and `client_id` sections of [`oauth2-proxy.cfg`](./shiny-example/oauth2-proxy.cfg).
 ![Creating OAuth App with GitHub](./assets/oauth2-proxy.png)
 
-2. Create an email whitelist as [`emails.txt`](./emails.txt), try this with your email account linked to your GitHub account
+2. Create an email whitelist as [`emails.txt`](./shiny-example/emails.txt), try this with your email account linked to your GitHub account
 
-3. Create a cookie and add it to the `cookie_secret` parameter in the [`oauth2-proxy.cfg`](./oauth2-proxy.cfg) configuration file.
+3. Create a cookie and add it to the `cookie_secret` parameter in the [`oauth2-proxy.cfg`](./shiny-example/oauth2-proxy.cfg) configuration file.
 
 4. Build a local copy of the Shiny app container
     ```bash
