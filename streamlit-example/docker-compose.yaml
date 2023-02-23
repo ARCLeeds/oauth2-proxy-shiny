@@ -11,8 +11,8 @@ services:
       - "./oauth2-proxy.cfg:/oauth2-proxy.cfg"
       - "./emails.txt:/app/emails.txt"
     restart: unless-stopped
-  shiny:
-    image: test-shiny:latest
+  streamlit:
+    image: test-streamlit:latest
     expose:
-     - "3838"
+     - "8501"
     restart: unless-stopped
